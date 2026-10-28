@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réserver un appel découverte · CM Island</title>
+<meta name="description" content="Réservez un appel découverte de 30 minutes avec CM Island, content strategist et community manager en Guadeloupe.">
+<link rel="canonical" href="https://www.cmisland.com/reservation.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CM Island">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Réserver un appel découverte · CM Island">
+<meta property="og:description" content="Réservez un appel découverte de 30 minutes avec CM Island, content strategist et community manager en Guadeloupe.">
+<meta property="og:url" content="https://www.cmisland.com/reservation.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav bande" id="haut">
+  <div class="cadre">
+    <a class="marque" href="index.html" aria-label="CM Island, accueil"><b>CM Island</b><span>Créateur d'univers</span></a>
+    <nav class="liens" aria-label="Navigation principale">
+      <a href="offres.html">Accompagnements</a>
+      <a href="index.html#methode">Méthode</a>
+      <a href="apropos.html">À propos</a>
+      <a href="questions.html">Questions</a>
+      <a class="btn btn-bleu" href="reservation.html" aria-current="page">Réserver un appel</a>
+    </nav>
+    <button class="menu-mobile" id="menu" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main>
+  <div class="page-titre bande">
+    <div class="cadre">
+      <p class="surtitre">Appel découverte · 30 minutes</p>
+      <h1>Discutons de votre stratégie</h1>
+      <p class="intro">Choisissez le créneau qui vous convient. Trente minutes pour comprendre votre entreprise, vos objectifs et voir si CM Island peut vous accompagner.</p>
+    </div>
+  </div>
+
+  <section class="bande" aria-labelledby="t-agenda">
+    <div class="cadre rdv">
+      <div>
+        <h2 id="t-agenda" class="sous-titre">Ce que nous verrons ensemble</h2>
+        <ul class="inclus">
+          <li>Votre entreprise, votre offre et vos clients</li>
+          <li>Vos objectifs et ce que vos réseaux doivent vous apporter</li>
+          <li>Votre communication actuelle</li>
+          <li>L'accompagnement le plus adapté, s'il y en a un</li>
+        </ul>
+        <p class="note">Vous préférez écrire ? emma.tranchant@cmisland.com</p>
+      </div>
+      <div class="agenda-zone">
+        <div class="agenda" id="agenda">
+          <div class="agenda-attente">
+            <h3>Les créneaux disponibles</h3>
+            <p>Le calendrier s'affiche ici : choisissez votre date et votre heure, puis confirmez.</p>
+            <button class="btn btn-bordeaux" id="voir-dispo" type="button">Voir les disponibilités</button>
+            <small>Le calendrier est fourni par Cal.com, qui s'affiche uniquement à votre demande. <a href="confidentialite.html#cookies">En savoir plus</a></small>
+          </div>
+        </div>
+        <p class="note secours">Le calendrier ne s'affiche pas ? <a href="https://cal.com/cm-island/appel-decouverte" target="_blank" rel="noopener">Ouvrir la page de réservation</a></p>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="bande">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="index.html"><b>CM Island</b><span>Créateur d'univers</span></a>
+      <p>Content strategist &amp; community manager. Fondée en Guadeloupe, au service des entreprises des Antilles et de l'Hexagone.</p>
+    </div>
+    <div>
+      <h3>Explorer</h3>
+      <ul><li><a href="offres.html">Accompagnements</a></li><li><a href="index.html#methode">Méthode</a></li><li><a href="apropos.html">À propos</a></li><li><a href="questions.html">Questions fréquentes</a></li></ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul><li>emma.tranchant@cmisland.com</li><li><a href="https://www.instagram.com/cm_island/" rel="noopener">Instagram</a></li><li><a href="reservation.html">Réserver un appel</a></li></ul>
+    </div>
+    <div class="bas"><span>© 2026 CM Island · Emma Tranchant EI · TVA non applicable, art. 293 B du CGI</span><span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a> · <a href="cgv.html">CGV</a></span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  function enHaut(){if(location.hash){return;}window.scrollTo(0,0);var h=document.getElementById('haut');if(h&&h.scrollIntoView){try{h.scrollIntoView({block:'start'});}catch(e){h.scrollIntoView(true);}}}
+  enHaut();
+  window.addEventListener('load',enHaut);
+  window.addEventListener('pageshow',enHaut);
+  var nav=document.querySelector('.nav'), b=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');b.setAttribute('aria-expanded',String(o));b.textContent=o?'Fermer':'Menu';});
+  nav.querySelectorAll('.liens a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.textContent='Menu';});});
+  var voir=document.getElementById('voir-dispo'), offre=new URLSearchParams(location.search).get('offre');
+  var noms={strategie:'Stratégie',gestion:'Gestion',immersion:'Immersion',profils:'Mise en place des profils',services:'Services complémentaires'};
+  if(voir){voir.addEventListener('click',function(){
+    var src='https://cal.com/cm-island/appel-decouverte?embed=true&theme=light&layout=month_view';
+    if(offre && noms[offre]){src+='&notes='+encodeURIComponent("Offre qui m’intéresse : "+noms[offre]);}
+    var f=document.createElement('iframe');f.src=src;f.title='Réserver un appel découverte avec CM Island';f.setAttribute('allow','fullscreen');
+    var z=document.getElementById('agenda');z.innerHTML='';z.appendChild(f);f.focus();
+  });}
+  var etapes=document.querySelectorAll('.etape'), panneau=document.getElementById('detail-etape');
+  if(panneau){
+    etapes.forEach(function(e){e.addEventListener('click',function(){
+      etapes.forEach(function(x){x.setAttribute('aria-expanded','false');});
+      e.setAttribute('aria-expanded','true');
+      var t=document.getElementById(e.dataset.detail);
+      panneau.innerHTML='<span class="num">'+e.querySelector('.num').textContent+'</span>'+t.innerHTML;
+    });});
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Merci · CM Island</title>
+<meta name="description" content="Confirmation de paiement et prochaines étapes de votre accompagnement CM Island.">
+<link rel="canonical" href="https://www.cmisland.com/merci.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CM Island">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Merci · CM Island">
+<meta property="og:description" content="Confirmation de paiement et prochaines étapes de votre accompagnement CM Island.">
+<meta property="og:url" content="https://www.cmisland.com/merci.html">
+<link rel="stylesheet" href="style.css">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<header class="nav bande" id="haut">
+  <div class="cadre">
+    <a class="marque" href="index.html" aria-label="CM Island, accueil"><b>CM Island</b><span>Créateur d'univers</span></a>
+    <nav class="liens" aria-label="Navigation principale">
+      <a href="offres.html">Accompagnements</a>
+      <a href="index.html#methode">Méthode</a>
+      <a href="apropos.html">À propos</a>
+      <a href="questions.html">Questions</a>
+      <a class="btn btn-bleu" href="reservation.html">Réserver un appel</a>
+    </nav>
+    <button class="menu-mobile" id="menu" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main>
+  <div class="page-titre bande">
+    <div class="cadre">
+      <p class="surtitre">Paiement confirmé</p>
+      <h1>Merci, votre accompagnement commence</h1>
+      <p class="intro">Votre paiement a bien été reçu. Votre reçu et votre facture vous sont envoyés par e-mail.</p>
+    </div>
+  </div>
+
+  <section class="bande" aria-labelledby="t-suite">
+    <div class="cadre merci">
+      <div class="entete">
+        <p class="surtitre" id="m-offre">Votre accompagnement</p>
+        <h2 id="t-suite">La suite, étape par étape</h2>
+      </div>
+
+      <div class="questionnaire" id="m-questionnaire">
+        <h3>Première étape : votre questionnaire de démarrage</h3>
+        <p>Il nous permet de connaître votre entreprise, vos objectifs et vos accès. Le travail démarre dès sa réception.</p>
+        <a class="btn btn-bordeaux" id="m-lien" href="#" target="_blank" rel="noopener" hidden>Remplir mon questionnaire</a>
+        <p class="note" id="m-envoi">Vous le recevez par e-mail sous 24 heures (jours ouvrés), à l'adresse utilisée pour le paiement.</p>
+      </div>
+
+      <ol class="parcours" id="m-etapes">
+        <li><span class="num">01</span><span>Questionnaire de démarrage et accès délégués à vos comptes (jamais de mot de passe)</span></li>
+        <li><span class="num">02</span><span>Audit stratégique : 3 semaines</span></li>
+        <li><span class="num">03</span><span>Stratégie social media : 3 semaines, présentée et validée avec vous</span></li>
+        <li><span class="num">04</span><span>Premiers contenus sous 7 jours après la validation de la stratégie</span></li>
+      </ol>
+      <p class="note" id="m-message">Vos premières publications arrivent vers la semaine 7 : la stratégie passe avant le contenu.</p>
+
+      <p class="note" style="margin-top:28px">Une question ? Écrivez à emma.tranchant@cmisland.com.</p>
+    </div>
+  </section>
+
+  <script>
+  (function(){
+    var QUESTIONNAIRES={profils:'',strategie:'',gestion:'',immersion:''};
+    var o=new URLSearchParams(location.search).get('offre');
+    var noms={profils:'Mise en place des profils',strategie:'Stratégie',gestion:'Gestion',immersion:'Immersion'};
+    if(!noms[o])return;
+    document.getElementById('m-offre').textContent='Votre accompagnement · '+noms[o];
+    var l=QUESTIONNAIRES[o];
+    if(l){var a=document.getElementById('m-lien');a.href=l;a.hidden=false;document.getElementById('m-envoi').textContent="Vous pouvez aussi le remplir plus tard : le lien vous est envoyé par e-mail.";}
+    var E={
+      profils:['Questionnaire de démarrage : votre entreprise, vos informations et vos visuels','Création de vos profils','Livraison sous 7 jours ouvrés après réception du questionnaire complet'],
+      strategie:['Questionnaire de démarrage et accès délégués à vos comptes (jamais de mot de passe)','Audit stratégique : 3 semaines','Stratégie social media : 3 semaines, présentée et validée avec vous']
+    };
+    var M={profils:'Vos profils sont livrés sous 7 jours ouvrés après réception du questionnaire complet.',strategie:'Vous recevez votre stratégie complète environ 6 semaines après le questionnaire.'};
+    if(E[o]){
+      document.getElementById('m-etapes').innerHTML=E[o].map(function(t,i){return '<li><span class="num">0'+(i+1)+'</span><span>'+t+'</span></li>';}).join('');
+      document.getElementById('m-message').textContent=M[o];
+    }
+  })();
+  </script>
+
+
+</main>
+
+<footer class="bande">
+  <div class="cadre">
+    <div>
+      <a class="marque" href="index.html"><b>CM Island</b><span>Créateur d'univers</span></a>
+      <p>Content strategist &amp; community manager. Fondée en Guadeloupe, au service des entreprises des Antilles et de l'Hexagone.</p>
+    </div>
+    <div>
+      <h3>Explorer</h3>
+      <ul><li><a href="offres.html">Accompagnements</a></li><li><a href="index.html#methode">Méthode</a></li><li><a href="apropos.html">À propos</a></li><li><a href="questions.html">Questions fréquentes</a></li></ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul><li>emma.tranchant@cmisland.com</li><li><a href="https://www.instagram.com/cm_island/" rel="noopener">Instagram</a></li><li><a href="reservation.html">Réserver un appel</a></li></ul>
+    </div>
+    <div class="bas"><span>© 2026 CM Island · Emma Tranchant EI · TVA non applicable, art. 293 B du CGI</span><span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Politique de confidentialité</a> · <a href="cgv.html">CGV</a></span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  if('scrollRestoration' in history){history.scrollRestoration='manual';}
+  function enHaut(){if(location.hash){return;}window.scrollTo(0,0);var h=document.getElementById('haut');if(h&&h.scrollIntoView){try{h.scrollIntoView({block:'start'});}catch(e){h.scrollIntoView(true);}}}
+  enHaut();
+  window.addEventListener('load',enHaut);
+  window.addEventListener('pageshow',enHaut);
+  var nav=document.querySelector('.nav'), b=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=nav.classList.toggle('ouvert');b.setAttribute('aria-expanded',String(o));b.textContent=o?'Fermer':'Menu';});
+  nav.querySelectorAll('.liens a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('ouvert');b.setAttribute('aria-expanded','false');b.textContent='Menu';});});
+  var voir=document.getElementById('voir-dispo'), offre=new URLSearchParams(location.search).get('offre');
+  var noms={strategie:'Stratégie',gestion:'Gestion',immersion:'Immersion',profils:'Mise en place des profils',services:'Services complémentaires'};
+  if(voir){voir.addEventListener('click',function(){
+    var src='https://cal.com/cm-island/appel-decouverte?embed=true&theme=light&layout=month_view';
+    if(offre && noms[offre]){src+='&notes='+encodeURIComponent("Offre qui m’intéresse : "+noms[offre]);}
+    var f=document.createElement('iframe');f.src=src;f.title='Réserver un appel découverte avec CM Island';f.setAttribute('allow','fullscreen');
+    var z=document.getElementById('agenda');z.innerHTML='';z.appendChild(f);f.focus();
+  });}
+  var etapes=document.querySelectorAll('.etape'), panneau=document.getElementById('detail-etape');
+  if(panneau){
+    etapes.forEach(function(e){e.addEventListener('click',function(){
+      etapes.forEach(function(x){x.setAttribute('aria-expanded','false');});
+      e.setAttribute('aria-expanded','true');
+      var t=document.getElementById(e.dataset.detail);
+      panneau.innerHTML='<span class="num">'+e.querySelector('.num').textContent+'</span>'+t.innerHTML;
+    });});
+  }
+})();
+</script>
+</body>
+</html>
