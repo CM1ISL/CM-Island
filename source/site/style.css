@@ -4,7 +4,7 @@
    Layout : barre bordeaux, pages sur fond blanc cassé, blocs crème et bleu clair, pied de page bordeaux. Mode jour uniquement. */
 :root{
   --bordeaux:#622220; --blanc:#FFFCF7; --creme:#FFFAEC; --bleu:#B8C5D5;
-  --terra:#B44D25; --olive:#726933; --rose:#D6A8B2; --jaune:#FFE6B5;
+  --terra:#AB5535; --olive:#605504; --rose:#D6A8B2; --jaune:#FFE6B5;
   --titre:"Anaktoria","Cormorant Garamond",Georgia,"Times New Roman",serif;
   --texte:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
   --largeur:1120px;
